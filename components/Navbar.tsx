@@ -28,12 +28,12 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
               onClick={() => onNavigate('home')}
               className="flex-shrink-0 flex items-center gap-2"
             >
-              <div 
-                className="w-10 h-10 rounded-sm flex items-center justify-center text-white font-bold text-xl"
-                style={{ backgroundColor: config.primaryColor }}
-              >
-                IS
-              </div>
+<img 
+  src="/logo2.png" 
+  alt="Logo" 
+  className="w-10 h-10 object-contain" 
+/>
+
               <span className="text-2xl font-bold tracking-tight text-gray-900">{config.companyName}</span>
             </button>
           </div>
