@@ -30,7 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
             >
 
 <img
-  src={`${import.meta.env.BASE_URL}logo2.png`}
+  src="/logo2.png"
   alt="이수산업 로고"
   className="h-10 w-auto"
 />
