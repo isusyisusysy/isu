@@ -29,8 +29,8 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
               className="flex-shrink-0 flex items-center gap-2"
             >
 
-              <img 
-  src="/logo2.png" 
+<img
+  src={`${import.meta.env.BASE_URL}logo2.png`}
   alt="이수산업 로고"
   className="h-10 w-auto"
 />
