@@ -29,8 +29,11 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
               className="flex-shrink-0 flex items-center gap-2"
             >
 
-
-              <span className="text-2xl font-bold tracking-tight text-gray-900">{config.companyName}</span>
+              <img 
+  src="/logo2.png" 
+  alt="이수산업 로고"
+  className="h-10 w-auto"
+/>
             </button>
           </div>
           
