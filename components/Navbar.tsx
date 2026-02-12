@@ -29,10 +29,12 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
               className="flex-shrink-0 flex items-center gap-2"
             >
 <img 
-  src="/logo2.png" 
+  src="./logo2.png" 
   alt="Logo" 
   className="w-10 h-10 object-contain" 
-/>
+  onError={(e) => {
+    e.currentTarget.src = 'logo2.png';
+  }}
 
               <span className="text-2xl font-bold tracking-tight text-gray-900">{config.companyName}</span>
             </button>
