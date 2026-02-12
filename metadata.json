@@ -1,0 +1,7 @@
+{
+  "name": "이수산업",
+  "description": "건설 전문 기업 이수산업을 위한 현대적이고 신뢰감 있는 기업 소개 및 CMS 관리 시스템이 포함된 반응형 웹사이트입니다.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
