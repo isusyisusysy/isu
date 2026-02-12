@@ -20,7 +20,7 @@ const HomePage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavigate
 
         <div className="relative z-10 text-center text-white px-4 max-w-5xl">
           <div className="inline-block px-8 py-3 bg-[#EAFF00] border-2 border-black rounded-full text-3xl font-black mb-10 tracking-tighter uppercase text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all">
-            가로등기초 · 맨홀 제조 전문
+            가로등기초 · 맨홀 전문
           </div>
           
           <h1 className="text-5xl md:text-8xl font-black mb-14 tracking-tighter leading-tight drop-shadow-2xl">
