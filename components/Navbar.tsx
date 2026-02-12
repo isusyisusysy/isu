@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useConfig } from '../context/ConfigContext';
 import { Menu, X, Settings, ShoppingBag } from 'lucide-react';
@@ -24,6 +23,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
+            {/* 이 부분의 </button> 태그가 누락되어 수정했습니다 */}
             <button 
               onClick={() => onNavigate('home')}
               className="flex-shrink-0 flex items-center gap-2"
@@ -33,6 +33,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
                   alt="이수산업 로고" 
                   className="h-12 w-auto object-contain" 
                 />
+            </button> 
           </div>
           
           {/* Desktop Menu */}
