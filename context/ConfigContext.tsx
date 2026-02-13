@@ -32,7 +32,7 @@ const ConfigContext = createContext<ConfigContextType | undefined>(undefined);
 
 export const ConfigProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [config, setConfig] = useState<SiteConfig>(() => {
-    const saved = localStorage.getItem('isu_config');
+    const saved = localStorage.getItem('isu_config_v2');
     return saved ? JSON.parse(saved) : defaultConfig;
   });
 
@@ -42,7 +42,7 @@ export const ConfigProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   });
 
   useEffect(() => {
-    localStorage.setItem('isu_config', JSON.stringify(config));
+    localStorage.setItem('isu_config_v2', JSON.stringify(config));
   }, [config]);
 
   useEffect(() => {
