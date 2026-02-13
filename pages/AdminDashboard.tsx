@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react';
 import { useConfig } from '../context/ConfigContext';
 import { Layout, Palette, Save, CheckCircle, ShoppingBag } from 'lucide-react';
+import AdminLoginPage from './AdminLoginPage'; // 새로 만든 로그인 컴포넌트
 
 const AdminDashboard: React.FC = () => {
   const { config, updateConfig } = useConfig();
@@ -9,6 +9,9 @@ const AdminDashboard: React.FC = () => {
 
   // Form states
   const [formConfig, setFormConfig] = useState(config);
+
+  // 인증 상태 추가
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const handleSaveSettings = (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,6 +24,12 @@ const AdminDashboard: React.FC = () => {
     setTimeout(() => setSaveSuccess(false), 3000);
   };
 
+  // 🔹 조건부 렌더링: 로그인 전이면 AdminLoginPage 보여주기
+  if (!isAuthenticated) {
+    return <AdminLoginPage onLogin={() => setIsAuthenticated(true)} />;
+  }
+
+  // 🔹 로그인 성공 후 기존 AdminDashboard 내용 그대로
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 flex flex-col md:flex-row gap-8">
       {/* Sidebar */}
