@@ -19,7 +19,7 @@ const defaultConfig: SiteConfig = {
   phone: "010-3970-3338",
   email: "isusy@naver.com",
   vision: "가장 탄탄한 기초 위에 빛나는 도시를 설계합니다",
-  naverStoreUrl: "https://smartstore.naver.com/"
+  naverStoreUrl: "https://smartstore.naver.com/isuindustry"
 };
 
 const initialProjects: Project[] = [
