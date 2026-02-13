@@ -7,7 +7,7 @@ const AdminLoginPage: React.FC<{ onLogin: () => void }> = ({ onLogin }) => {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === '1234') { // 원하는 비밀번호로 변경 가능
+    if (password === '0824') { // 원하는 비밀번호로 변경 가능
       onLogin();
     } else {
       setError('비밀번호가 올바르지 않습니다.');
