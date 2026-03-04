@@ -51,26 +51,29 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
               </button>
             ))}
             
-            {config.naverStoreUrl && (
-              <a 
-                href={config.naverStoreUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-[#03C75A] text-white text-sm font-bold rounded-full hover:bg-[#02b351] transition-all"
-              >
-                <ShoppingBag size={16} />
-                네이버 스토어
-              </a>
-      <a
-            href="https://blog.naver.com/isusy"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 bg-[#03C75A] text-white text-sm font-bold rounded-md hover:bg-[#02b350] transition-colors"
-          >
-            <Edit3 size={16} />
-            네이버 블로그
-          </a>
-            )}
+            {/* 1. 네이버 스토어 버튼: config.naverStoreUrl 값이 있을 때만 표시 */}
+{config.naverStoreUrl && (
+  <a
+    href={config.naverStoreUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 px-4 py-2 bg-[#03C75A] text-white text-sm font-bold rounded-full hover:bg-[#02b351] transition-all"
+  >
+    <ShoppingBag size={16} />
+    네이버 스토어
+  </a>
+)}
+
+{/* 2. 네이버 블로그 버튼: 항상 표시 */}
+<a
+  href="https://blog.naver.com/isusy"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 px-4 py-2 bg-[#03C75A] text-white text-sm font-bold rounded-md hover:bg-[#02b350] transition-colors"
+>
+  <Edit3 size={16} />
+  네이버 블로그
+</a>
 
             <button
               onClick={() => onNavigate('admin')}
