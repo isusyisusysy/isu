@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { useConfig } from '../context/ConfigContext';
-import { Menu, X, Settings, ShoppingBag } from 'lucide-react';
+import { Menu, X, Settings, ShoppingBag, Edit3 } from 'lucide-react';
 
 interface NavbarProps {
   onNavigate: (page: string) => void;
@@ -61,6 +61,15 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
                 <ShoppingBag size={16} />
                 네이버 스토어
               </a>
+      <a
+            href="https://blog.naver.com/isusy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 bg-[#03C75A] text-white text-sm font-bold rounded-md hover:bg-[#02b350] transition-colors"
+          >
+            <Edit3 size={16} />
+            네이버 블로그
+          </a>
             )}
 
             <button
