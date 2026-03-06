@@ -10,9 +10,8 @@ import AdminDashboard from './pages/AdminDashboard';
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState('home');
 
-  // 페이지가 바뀔 때마다 실행되는 효과
+  // 페이지가 바뀔 때마다 상단으로 스크롤 이동
   useEffect(() => {
-    // 13~15번 라인 수정: 즉각적인 상단 이동을 위해 'auto' 설정을 확실히 합니다.
     window.scrollTo(0, 0);
   }, [currentPage]);
 
@@ -36,6 +35,6 @@ const App: React.FC = () => {
       <Footer />
     </div>
   );
-};
+}; // ← 여기서 세미콜론(;)만 남기고 여분의 중괄호가 없어야 합니다.
 
 export default App;
