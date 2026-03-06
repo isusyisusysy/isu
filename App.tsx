@@ -35,6 +35,6 @@ const App: React.FC = () => {
       <Footer />
     </div>
   );
-}; // ← 여기서 세미콜론(;)만 남기고 여분의 중괄호가 없어야 합니다.
+};
 
 export default App;
