@@ -1,6 +1,5 @@
 
 import React, { useState, useEffect } from 'react';
-import { ConfigProvider } from './text/figtext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -26,16 +25,13 @@ const App: React.FC = () => {
   };
 
   return (
-    <ConfigProvider>
-      <div className="min-h-screen flex flex-col">
-        <Navbar onNavigate={setCurrentPage} currentPage={currentPage} />
-        <main className="flex-grow">
-          {renderPage()}
-        </main>
-        <Footer />
-      </div>
-    </ConfigProvider>
-  );
-};
+  <div className="min-h-screen flex flex-col">
+    <Navbar onNavigate={setCurrentPage} currentPage={currentPage} />
+    <main className="flex-grow">
+      {renderPage()}
+    </main>
+    <Footer />
+  </div>
+);
 
 export default App;
