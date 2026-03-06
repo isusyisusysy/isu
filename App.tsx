@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { figProvider } from './text/figtext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -9,7 +9,7 @@ import BusinessPage from './pages/BusinessPage';
 import ProductsIntroPage from './pages/ProductsIntroPage';
 import AdminDashboard from './pages/AdminDashboard';
 
-st App: React.FC = () => {
+const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState('home');
  useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });
