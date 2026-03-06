@@ -6,6 +6,8 @@ import AboutPage from './pages/AboutPage';
 import BusinessPage from './pages/BusinessPage';
 import ProductsIntroPage from './pages/ProductsIntroPage';
 import AdminDashboard from './pages/AdminDashboard';
+// 1. 환경설정 보따리(Provider) 불러오기
+import { ConfigProvider } from './context/ConfigContext';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState('home');
@@ -27,13 +29,16 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar onNavigate={setCurrentPage} currentPage={currentPage} />
-      <main className="flex-grow">
-        {renderPage()}
-      </main>
-      <Footer />
-    </div>
+    // 2. 전체 구조를 ConfigProvider로 단단하게 감싸주기
+    <ConfigProvider>
+      <div className="min-h-screen flex flex-col">
+        <Navbar onNavigate={setCurrentPage} currentPage={currentPage} />
+        <main className="flex-grow">
+          {renderPage()}
+        </main>
+        <Footer />
+      </div>
+    </ConfigProvider>
   );
 };
 
