@@ -95,7 +95,7 @@ const HomePage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavigate
 
       <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
         <img
-          src="/images/etc-products.jpg"
+          src="/images/foundation.jpg"
           className="w-full h-64 object-cover"
         />
         <div className="p-7 text-center">
