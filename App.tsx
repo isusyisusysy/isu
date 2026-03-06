@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { figProvider } from './text/figtext';
+import { ConfigProvider } from './text/figtext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
