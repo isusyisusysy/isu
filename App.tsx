@@ -11,11 +11,9 @@ import AdminDashboard from './pages/AdminDashboard';
 
 st App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState('home');
-  
  useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });
-  }, [currentPage]);
-  
+  }, [currentPage]); 
   const renderPage = () => {
     switch (currentPage) {
       case 'home': return <HomePage onNavigate={setCurrentPage} />;
