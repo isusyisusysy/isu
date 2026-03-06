@@ -49,7 +49,69 @@ const HomePage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavigate
           </div>
         </div>
       </section>
+{/* Products Section */}
+<section className="bg-gray-50 py-24 px-6">
+  <div className="max-w-6xl mx-auto">
 
+    <h2 className="text-center text-4xl font-black text-slate-900 mb-4">
+      이수산업의 제품
+    </h2>
+
+    <div className="w-16 h-1.5 bg-blue-900 mx-auto rounded-full mb-14"></div>
+
+    <div className="grid md:grid-cols-3 gap-8">
+
+      <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img
+          src="/images/manhole.jpg"
+          className="w-full h-64 object-cover"
+        />
+        <div className="p-7 text-center">
+          <h3 className="text-2xl font-extrabold mb-5">맨홀 제품</h3>
+          <button
+            onClick={() => onNavigate('products')}
+            className="px-7 py-3 rounded-full text-white font-bold bg-gradient-to-r from-blue-900 to-blue-500"
+          >
+            자세히 보기 →
+          </button>
+        </div>
+      </div>
+
+      <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img
+          src="/images/lightbase.jpg"
+          className="w-full h-64 object-cover"
+        />
+        <div className="p-7 text-center">
+          <h3 className="text-2xl font-extrabold mb-5">가로등기초 제품</h3>
+          <button
+            onClick={() => onNavigate('products')}
+            className="px-7 py-3 rounded-full text-white font-bold bg-gradient-to-r from-blue-900 to-blue-500"
+          >
+            자세히 보기 →
+          </button>
+        </div>
+      </div>
+
+      <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <img
+          src="/images/etc-products.jpg"
+          className="w-full h-64 object-cover"
+        />
+        <div className="p-7 text-center">
+          <h3 className="text-2xl font-extrabold mb-5">기타 콘크리트 제품</h3>
+          <button
+            onClick={() => onNavigate('products')}
+            className="px-7 py-3 rounded-full text-white font-bold bg-gradient-to-r from-blue-900 to-blue-500"
+          >
+            자세히 보기 →
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
       {/* Specialty Highlights - 핵심 기술 섹션 */}
       <section className="relative pt-32 pb-20 bg-white">
         <div className="absolute top-0 right-0 p-20 opacity-[0.03] select-none pointer-events-none hidden lg:block">
