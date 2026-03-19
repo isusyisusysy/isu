@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useConfig } from '../context/ConfigContext';
 import { Menu, X, Settings, ShoppingBag, Edit3 } from 'lucide-react';
@@ -25,19 +24,21 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
-            <button 
-              onClick={() => onNavigate('home')}
+            <button
+              onClick={() => {
+                onNavigate('home');
+                setIsOpen(false);
+              }}
               className="flex-shrink-0 flex items-center gap-2"
             >
-
-<img
-  src="/logotest.png"
-  alt="이수산업 로고"
-  className="h-10 w-auto"
-/>
+              <img
+                src="/logotest.png"
+                alt="이수산업 로고"
+                className="h-10 w-auto"
+              />
             </button>
           </div>
-          
+
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             {menuItems.map((item) => (
@@ -51,35 +52,31 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
                 {item.name}
               </button>
             ))}
-            
-           {/* 두 버튼을 감싸는 새로운 div 추가 */}
-<div className="flex items-center gap-3"> 
-  
-  {/* 1. 네이버 스토어 버튼 (둥글기 수정 포함) */}
-  {config.naverStoreUrl && (
-    <a
-      href={config.naverStoreUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-2 px-4 py-2 bg-[#03C75A] text-white text-sm font-bold rounded-md hover:bg-[#02b351] transition-all"
-    >
-      <ShoppingBag size={16} />
-      네이버 스토어
-    </a>
-  )}
 
-  {/* 2. 네이버 블로그 버튼 */}
-  <a
-    href="https://blog.naver.com/isusy"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center gap-2 px-4 py-2 bg-[#03C75A] text-white text-sm font-bold rounded-md hover:bg-[#02b350] transition-colors"
-  >
-    <Edit3 size={16} />
-    네이버 블로그
-  </a>
+            {/* 우측 바로가기 버튼들 */}
+            <div className="flex items-center gap-3">
+              {config.naverStoreUrl && (
+                <a
+                  href={config.naverStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#03C75A] text-white text-sm font-bold rounded-md hover:bg-[#02b351] transition-all"
+                >
+                  <ShoppingBag size={16} />
+                  네이버 스토어
+                </a>
+              )}
 
-</div>
+              <a
+                href="https://blog.naver.com/isusy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 bg-[#03C75A] text-white text-sm font-bold rounded-md hover:bg-[#02b350] transition-colors"
+              >
+                <Edit3 size={16} />
+                네이버 블로그
+              </a>
+            </div>
 
             <button
               onClick={() => onNavigate('admin')}
@@ -95,8 +92,9 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-600 hover:text-gray-900 p-2"
+              aria-label="메뉴 열기"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
         </div>
@@ -114,18 +112,21 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
                   setIsOpen(false);
                 }}
                 className={`block w-full text-left px-3 py-4 text-base font-medium rounded-md ${
-                  currentPage === item.id ? 'bg-blue-50 text-blue-700' : 'text-gray-700 hover:bg-gray-50'
+                  currentPage === item.id
+                    ? 'bg-blue-50 text-blue-700'
+                    : 'text-gray-700 hover:bg-gray-50'
                 }`}
               >
                 {item.name}
               </button>
             ))}
-            
+
             {config.naverStoreUrl && (
-              <a 
+              <a
                 href={config.naverStoreUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
                 className="flex items-center gap-2 px-3 py-4 text-base font-bold text-[#03C75A] hover:bg-green-50 rounded-md"
               >
                 <ShoppingBag size={20} />
@@ -133,12 +134,23 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
               </a>
             )}
 
+            <a
+              href="https://blog.naver.com/isusy"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center gap-2 px-3 py-4 text-base font-bold text-[#03C75A] hover:bg-green-50 rounded-md"
+            >
+              <Edit3 size={20} />
+              네이버 블로그 바로가기
+            </a>
+
             <button
               onClick={() => {
                 onNavigate('admin');
                 setIsOpen(false);
               }}
-              className="block w-full text-left px-3 py-4 text-base font-medium text-gray-700 hover:bg-gray-50"
+              className="block w-full text-left px-3 py-4 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md"
             >
               관리자 설정
             </button>
