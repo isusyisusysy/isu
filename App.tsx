@@ -57,7 +57,7 @@ const AppContent: React.FC = () => {
           <div className="flex shadow-[0_-8px_24px_rgba(0,0,0,0.2)] border-t border-white/10">
             <a
               href={`tel:${config.phone}`}
-              className="w-1/2 py-4 bg-[#FF4D6D] text-white text-center font-black flex items-center justify-center gap-2 active:scale-95 transition"
+              className="w-1/2 py-4 bg-[#FF3B5C] text-white text-center font-black flex items-center justify-center gap-2 active:scale-95 transition"
             >
               📞 전화 상담
             </a>
