@@ -24,28 +24,33 @@ const HomePage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavigate
           </div>
           
           <h1 className="text-5xl md:text-8xl font-black mb-14 tracking-tighter leading-tight drop-shadow-2xl">
-            <span className="block mb-2">이수산업과 함께</span>
-            <span className="text-blue-400 block">안전한 인프라를</span>
+           <span className="block mb-2">가로등기초 · 맨홀</span>
+<span className="text-blue-400 block">빠르게 상담받고 바로 진행하세요</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-12 text-blue-100/80 font-light max-w-3xl mx-auto leading-relaxed">
-            최고의 품질과 풍부한 경험으로<br />
-            안전한 미래를 건설하는 파트너, 이수산업입니다.
+            가로등기초, 콘크리트 맨홀, 사각맨홀 등<br />
+현장 조건에 맞춘 제작 및 전국 납품 가능합니다.<br /><br />
+규격, 앙카 간격, 수량, 납품 일정까지<br />
+빠르고 정확하게 상담해드립니다.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button 
-              onClick={() => onNavigate('business')}
-              className="px-10 py-5 bg-white hover:bg-gray-100 rounded-xl font-black text-lg transition-all flex items-center justify-center gap-3 shadow-2xl hover:scale-105 active:scale-95"
-              style={{ color: config.primaryColor }}
-            >
-              전문 사업분야 보기 <ArrowRight size={24} />
-            </button>
-            <button 
-              onClick={() => onNavigate('about')}
-              className="px-10 py-5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 rounded-xl font-black text-lg transition-all shadow-2xl hover:scale-105 active:scale-95"
-            >
-              회사소개
-            </button>
+<p className="mb-6 text-sm text-gray-300">
+  ✔ 대량 주문 / 특수 규격 제작 가능 · ✔ 전국 납품 대응
+</p>
+            <button
+  onClick={() => window.location.href = "tel:010-3970-3338"}
+  className="px-10 py-5 bg-white hover:bg-gray-100 rounded-xl font-black text-lg transition-all flex items-center justify-center gap-3 shadow-2xl hover:scale-105 active:scale-95"
+  style={{ color: config.primaryColor }}
+>
+  견적 문의하기 📞
+</button>
+           <button
+  onClick={() => window.open("스토어링크", "_blank")}
+  className="px-10 py-5 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 rounded-xl font-black text-lg transition-all shadow-2xl hover:scale-105 active:scale-95"
+>
+  네이버 스토어 보기 🛒
+</button>
           </div>
         </div>
       </section>
