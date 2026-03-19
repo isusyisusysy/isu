@@ -45,7 +45,7 @@ const HomePage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavigate
   style={{ color: config.primaryColor }}
 >
   견적 문의하기 📞
-<button
+</button>
   onClick={() => window.open("https://smartstore.naver.com/isuindustry", "_blank")}
   className="..."
 >
