@@ -130,8 +130,7 @@ const ContactPage: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-black text-slate-900 mb-1">상담 가능 시간</h3>
-                  <p className="text-gray-600">평일 09:00 ~ 18:00</p>
-                  <p className="text-xs text-gray-400 mt-1">주말/공휴일 휴무</p>
+                  <p className="text-gray-600">연중무휴 24시간 상담가능</p>
                 </div>
               </div>
             </div>
