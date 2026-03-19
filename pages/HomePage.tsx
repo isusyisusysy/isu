@@ -24,9 +24,11 @@ const HomePage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavigate
           </div>
           
           <h1 className="text-5xl md:text-8xl font-black mb-14 tracking-tighter leading-tight drop-shadow-2xl">
-           <span className="block mb-2">가로등기초 · 맨홀</span>
-<span className="text-blue-400 block">빠르게 상담받고 바로 진행하세요</span>
-          </h1>
+           <span className="block mb-2">규격, 앙카 간격, 수량, 납품 일정까지</span>
+<span className="text-blue-400 block text-5xl md:text-7xl">
+    빠르게 상담받고 바로 진행하세요
+  </span>
+</h1>
           
           <p className="text-xl md:text-2xl mb-12 text-blue-100/80 font-light max-w-3xl mx-auto leading-relaxed">
             가로등기초, 콘크리트 맨홀, 사각맨홀 등<br />
