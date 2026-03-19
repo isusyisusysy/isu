@@ -15,52 +15,47 @@ const HomePage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavigate
 
   return (
     <div className="space-y-0 pb-20 overflow-hidden">
-      {/* Hero Section */}
-      <section
-        className="relative min-h-[640px] md:min-h-[780px] flex items-center justify-center overflow-hidden"
-        style={{ backgroundColor: config.primaryColor }}
+     {/* Hero Section */}
+<section
+  className="relative min-h-[560px] md:min-h-[780px] flex items-center justify-center overflow-hidden"
+  style={{ backgroundColor: config.primaryColor }}
+>
+  <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
+  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-transparent to-black/40" />
+
+  <div className="absolute top-1/4 -left-20 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]" />
+  <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-400/10 rounded-full blur-[120px]" />
+
+  <div className="relative z-10 text-center text-white px-4 max-w-5xl -mt-12 md:mt-0">
+    <div className="inline-block px-5 py-2 md:px-10 md:py-4 bg-[#EAFF00] border-2 border-black rounded-full text-2xl md:text-5xl font-black mb-5 md:mb-10 tracking-tighter text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+      가로등기초 · 맨홀 전문
+    </div>
+
+    <h1 className="text-5xl md:text-7xl font-black mb-4 md:mb-8 tracking-tighter leading-tight drop-shadow-2xl">
+      <span className="block mb-1 md:mb-2">현장 맞춤 제작</span>
+      <span className="block text-blue-400">전국 납품 상담</span>
+    </h1>
+
+    <p className="text-lg md:text-2xl mb-5 text-blue-100/85 font-light max-w-2xl mx-auto leading-relaxed">
+      가로등기초, 콘크리트 맨홀, 사각맨홀 상담 가능
+    </p>
+
+    <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mt-2">
+      <button
+        onClick={() =>
+          window.open(
+            'https://smartstore.naver.com/isuindustry',
+            '_blank',
+            'noopener,noreferrer'
+          )
+        }
+        className="px-10 py-5 bg-[#03C75A] hover:bg-[#02b350] text-white rounded-xl font-black text-lg transition-all flex items-center justify-center gap-3 shadow-2xl hover:scale-105 active:scale-95"
       >
-        <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-transparent to-black/40" />
-
-        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-400/10 rounded-full blur-[120px]" />
-
-        <div className="relative z-10 text-center text-white px-4 max-w-5xl">
-          <div className="inline-block px-6 py-2 md:px-10 md:py-4 bg-[#EAFF00] border-2 border-black rounded-full text-xl md:text-5xl font-black mb-6 md:mb-10 tracking-tighter text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-            가로등기초 · 맨홀 전문
-          </div>
-
-          <h1 className="text-3xl md:text-7xl font-black mb-5 md:mb-8 tracking-tighter leading-tight drop-shadow-2xl">
-            <span className="block mb-1 md:mb-2">현장 맞춤 제작</span>
-            <span className="block text-blue-400">전국 납품 상담</span>
-          </h1>
-
-          <p className="text-base md:text-2xl mb-6 text-blue-100/85 font-light max-w-2xl mx-auto leading-relaxed">
-            가로등기초, 콘크리트 맨홀, 사각맨홀 상담 가능
-          </p>
-
-          <p className="hidden md:block mb-8 text-sm md:text-base text-gray-300">
-            ✔ 대량 주문 · 특수 규격 제작 가능 &nbsp;&nbsp; ✔ 전국 납품 대응
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button
-              onClick={() =>
-                window.open(
-                  'https://smartstore.naver.com/isuindustry',
-                  '_blank',
-                  'noopener,noreferrer'
-                )
-              }
-              className="px-10 py-5 bg-[#03C75A] hover:bg-[#02b350] text-white rounded-xl font-black text-lg transition-all flex items-center justify-center gap-3 shadow-2xl hover:scale-105 active:scale-95"
-            >
-              네이버 스토어 보기 🛒
-            </button>
-          </div>
-        </div>
-      </section>
-
+        네이버 스토어 보기 🛒
+      </button>
+    </div>
+  </div>
+</section>
       {/* Products Section */}
       <section className="bg-gray-50 py-24 px-6">
         <div className="max-w-6xl mx-auto">
