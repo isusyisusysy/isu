@@ -17,6 +17,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentPage }) => {
     { name: '회사소개', id: 'about' },
     { name: '사업영역', id: 'business' },
     { name: '제품소개', id: 'products' },
+    { name: '상담·견적문의', id: 'contact' },
   ];
 
   return (
