@@ -24,7 +24,7 @@ const HomePage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavigate
           </div>
           
           <h1 className="text-5xl md:text-8xl font-black mb-14 tracking-tighter leading-tight drop-shadow-2xl">
-           <span className="block mb-2">규격, 앙카 간격, 수량, 납품 일정까지</span>
+           <span className="block mb-2">현장 맞춤 제작 및 전국 납품</span>
 <span className="text-blue-400 block text-5xl md:text-7xl">
     빠르게 상담받고 바로 진행하세요
   </span>
@@ -32,8 +32,7 @@ const HomePage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavigate
           
           <p className="text-xl md:text-2xl mb-12 text-blue-100/80 font-light max-w-3xl mx-auto leading-relaxed">
             가로등기초, 콘크리트 맨홀, 사각맨홀 등<br />
-현장 조건에 맞춘 제작 및 전국 납품 가능합니다.<br /><br />
-규격, 앙카 간격, 수량, 납품 일정까지<br />
+현장 조건에 맞춘 제작 및 전국 납품 가능합니다. 규격, 앙카 간격, 수량, 납품 일정까지<br />
 빠르고 정확하게 상담해드립니다.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
