@@ -55,14 +55,12 @@ const HomePage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavigate
             </button>
 
             <button
-              onClick={() => {
-                window.location.href = 'tel:010-3970-3338';
-              }}
-              className="px-10 py-5 bg-white hover:bg-gray-100 rounded-xl font-black text-lg transition-all flex items-center justify-center gap-3 shadow-2xl hover:scale-105 active:scale-95"
-              style={{ color: config.primaryColor }}
-            >
-              견적 문의하기 📞
-            </button>
+  onClick={() => onNavigate('contact')}
+  className="px-10 py-5 bg-white hover:bg-gray-100 rounded-xl font-black text-lg transition-all flex items-center justify-center gap-3 shadow-2xl hover:scale-105 active:scale-95"
+  style={{ color: config.primaryColor }}
+>
+  견적 문의하기 📞
+</button>
           </div>
         </div>
       </section>
