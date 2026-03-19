@@ -6,7 +6,6 @@ import {
   MapPin,
   Clock,
   ShoppingBag,
-  FileText,
   CheckCircle2,
 } from 'lucide-react';
 
@@ -17,7 +16,7 @@ const ContactPage: React.FC = () => {
     <div className="pb-20 bg-white overflow-hidden">
       {/* Hero Section */}
       <section
-        className="relative min-h-[620px] flex items-center justify-center overflow-hidden text-white"
+        className="relative min-h-[700px] flex items-center justify-center overflow-hidden text-white"
         style={{ backgroundColor: config.primaryColor }}
       >
         <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
@@ -26,7 +25,7 @@ const ContactPage: React.FC = () => {
         <div className="absolute top-1/4 -left-20 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]" />
         <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-400/10 rounded-full blur-[120px]" />
 
-        <div className="relative z-10 text-center px-4 max-w-5xl">
+        <div className="relative z-10 text-center px-4 max-w-5xl pt-10 pb-28">
           <div className="inline-block px-8 py-3 bg-[#EAFF00] border-2 border-black rounded-full text-2xl md:text-3xl font-black mb-8 tracking-tighter text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
             상담 · 견적문의
           </div>
@@ -77,8 +76,8 @@ const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Quick Action Cards */}
-      <section className="bg-gray-50 py-16 px-4">
+      {/* Quick Action Cards - 위로 올린 버전 */}
+      <section className="relative z-20 -mt-24 pb-10 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-6">
             {[
@@ -86,19 +85,29 @@ const ContactPage: React.FC = () => {
                 icon: <Phone size={26} />,
                 title: '전화 상담',
                 desc: '급한 견적 문의나 납품 일정 확인이 필요하시면 전화로 빠르게 상담 가능합니다.',
+                href: `tel:${config.phone}`,
               },
               {
                 icon: <MessageSquare size={26} />,
                 title: '문자 문의',
                 desc: '규격, 수량, 납품 지역, 일정 등을 문자로 보내주시면 확인 후 안내드립니다.',
+                href: `sms:${config.phone}`,
               },
               {
                 icon: <ShoppingBag size={26} />,
                 title: '스토어 확인',
                 desc: '제품 이미지, 규격, 상세 정보는 네이버 스토어에서 바로 확인하실 수 있습니다.',
+                href: 'https://smartstore.naver.com/isuindustry',
+                external: true,
               },
             ].map((item, idx) => (
-              <div key={idx} className="bg-white rounded-3xl shadow-lg border border-gray-100 p-8 text-center">
+              <a
+                key={idx}
+                href={item.href}
+                target={item.external ? '_blank' : undefined}
+                rel={item.external ? 'noopener noreferrer' : undefined}
+                className="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 text-center block hover:-translate-y-1 hover:shadow-2xl transition-all"
+              >
                 <div
                   className="w-16 h-16 mx-auto mb-5 rounded-2xl flex items-center justify-center text-white shadow-md"
                   style={{ backgroundColor: config.primaryColor }}
@@ -107,14 +116,14 @@ const ContactPage: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-extrabold mb-4 text-slate-900">{item.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
-              </div>
+              </a>
             ))}
           </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-12 pt-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-12 pt-10">
         {/* Contact Info */}
         <div className="space-y-8">
           <div>
