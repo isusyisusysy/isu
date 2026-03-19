@@ -6,6 +6,7 @@ import AboutPage from './pages/AboutPage';
 import BusinessPage from './pages/BusinessPage';
 import ProductsIntroPage from './pages/ProductsIntroPage';
 import AdminDashboard from './pages/AdminDashboard';
+import ContactPage from './pages/ContactPage';
 // 1. 환경설정 보따리(Provider) 불러오기
 import { ConfigProvider } from './context/ConfigContext';
 
@@ -18,15 +19,16 @@ const App: React.FC = () => {
   }, [currentPage]);
 
   const renderPage = () => {
-    switch (currentPage) {
-      case 'home': return <HomePage onNavigate={setCurrentPage} />;
-      case 'about': return <AboutPage />;
-      case 'business': return <BusinessPage />;
-      case 'products': return <ProductsIntroPage />;
-      case 'admin': return <AdminDashboard />;
-      default: return <HomePage onNavigate={setCurrentPage} />;
-    }
-  };
+  switch (currentPage) {
+    case 'home': return <HomePage onNavigate={setCurrentPage} />;
+    case 'about': return <AboutPage />;
+    case 'business': return <BusinessPage />;
+    case 'products': return <ProductsIntroPage />;
+    case 'contact': return <ContactPage />;
+    case 'admin': return <AdminDashboard />;
+    default: return <HomePage onNavigate={setCurrentPage} />;
+  }
+};
 
   return (
     // 2. 전체 구조를 ConfigProvider로 단단하게 감싸주기
