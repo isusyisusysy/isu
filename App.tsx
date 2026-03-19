@@ -7,8 +7,6 @@ import BusinessPage from './pages/BusinessPage';
 import ProductsIntroPage from './pages/ProductsIntroPage';
 import AdminDashboard from './pages/AdminDashboard';
 import ContactPage from './pages/ContactPage';
-
-// 환경설정 보내미(Provider) 불러오기
 import { ConfigProvider, useConfig } from './context/ConfigContext';
 
 const AppContent: React.FC = () => {
@@ -44,30 +42,33 @@ const AppContent: React.FC = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar onNavigate={setCurrentPage} currentPage={currentPage} />
 
-      {/* 하단 고정 버튼 때문에 모바일에서 내용 안 가려지게 여백 추가 */}
-      <main className="flex-grow pb-20 md:pb-0">
+      <main className="flex-grow pb-28 md:pb-0">
         {renderPage()}
       </main>
 
       <Footer />
 
-      {/* 모바일 하단 고정 전화/문자 버튼 */}
       {showMobileFixedBar && (
-        <div className="fixed bottom-0 left-0 w-full z-50 flex md:hidden shadow-2xl">
-          <a
-            href={`tel:${config.phone}`}
-            className="w-1/2 py-4 text-white text-center font-black flex items-center justify-center gap-2"
-            style={{ backgroundColor: config.primaryColor }}
-          >
-            📞 전화 상담
-          </a>
+        <div className="fixed bottom-0 left-0 w-full z-50 md:hidden">
+          <div className="bg-[#EAFF00] text-black text-center text-xs font-black py-2 border-t border-black">
+            연중무휴 · 24시간 상담 가능
+          </div>
 
-          <a
-            href={`sms:${config.phone}`}
-            className="w-1/2 py-4 bg-gray-800 text-white text-center font-black flex items-center justify-center gap-2"
-          >
-            ✉ 문자 문의
-          </a>
+          <div className="flex shadow-[0_-8px_24px_rgba(0,0,0,0.2)] border-t border-white/10">
+            <a
+              href={`tel:${config.phone}`}
+              className="w-1/2 py-4 bg-[#03C75A] text-white text-center font-black flex items-center justify-center gap-2 active:scale-95 transition"
+            >
+              📞 전화 상담
+            </a>
+
+            <a
+              href={`sms:${config.phone}`}
+              className="w-1/2 py-4 bg-[#1F2937] text-white text-center font-black flex items-center justify-center gap-2 border-l border-white/10 active:scale-95 transition"
+            >
+              ✉ 문자 문의
+            </a>
+          </div>
         </div>
       )}
     </div>
