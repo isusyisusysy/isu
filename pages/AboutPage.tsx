@@ -52,7 +52,7 @@ const AboutPage: React.FC = () => {
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px]"></div>
         <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
-          <span className="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-xs font-bold uppercase tracking-[0.3em] mb-6">About Isu Sanyup</span>
+          <span className="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-xs font-bold uppercase tracking-[0.3em] mb-6">About Isu Industry</span>
           <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter">회사소개</h1>
           <p className="text-blue-100/70 max-w-2xl mx-auto font-medium text-lg leading-relaxed">
             건설의 기초를 바로 세우고,<br className="md:hidden" /> 안전한 인프라로 내일을 연결합니다.
@@ -100,7 +100,7 @@ const AboutPage: React.FC = () => {
           <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-4xl font-black mb-4 tracking-tight text-gray-900">핵심 비즈니스 역량</h2>
             <div className="w-12 h-1 bg-blue-500 mx-auto mb-4 rounded-full" style={{ backgroundColor: config.primaryColor }}></div>
-            <p className="text-gray-400 font-bold text-xs tracking-widest uppercase">6 Core Competencies of Isu Sanyup</p>
+            <p className="text-gray-400 font-bold text-xs tracking-widest uppercase">6 Core Competencies of Isu Industry</p>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
